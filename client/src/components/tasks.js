@@ -5,8 +5,8 @@ import './style/tasks.css'
 function Tasks({
   allTasks,
   setAllTasks,
-  currTask,
-  setcurrTask,
+  updatedTask,
+  setUpdatedTask,
 }) {
   // console.log(todayTasks)
   let takeLogIn = useNavigate();
@@ -15,7 +15,7 @@ function Tasks({
       <TaskUl
         key={taskd.id}
         taskd={taskd}
-        setcurrTask={setcurrTask}
+        setUpdatedTask={setUpdatedTask}
         allTasks={allTasks}
         setAllTasks={setAllTasks}
       />

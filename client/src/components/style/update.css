@@ -1,0 +1,73 @@
+.formDivUpdate {
+    position: absolute;
+    top: 0px;
+    background-image: url(../../../public/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100%;
+  }
+  
+  .loginDivUpdate {
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  .logInFormUpdate {
+    background-color: rgba(240, 232, 232, 0.97);
+    width: 60%;
+    height: 400px;
+    text-align: left;
+    padding:30px 10px;
+    border-radius: 12px;
+  }
+  
+  .logInFormUpdate label {
+    /* padding: 20px; */
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 10px
+  }
+  
+  .logInFormUpdate input {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px
+  }
+  
+  .logInFormUpdate input[type="submit"] {
+    background-color: rgb(255, 87, 51);
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .cancelUpdateTask{
+    background-color: rgb(255, 87, 51);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .cancelNav{
+    background-color: rgb(255, 87, 51);
+    color: white;
+    /* margin: 10px; */
+    /* padding: 10px; */
+    border-radius: 10px;
+    text-decoration: none;
+
+  }
+
+  .choiceStatus{
+    float: left;
+    padding-bottom: 20px;
+  }

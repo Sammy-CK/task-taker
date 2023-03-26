@@ -6,6 +6,7 @@ import LogIn from "./components/login";
 import SignUp from "./components/signup";
 import Tasks from "./components/tasks";
 import AddTask from './components/addtask';
+import UpdateTask from './components/updatetask';
 
 
 
@@ -18,9 +19,15 @@ function App() {
     password: "",
   });
 let [allTasks, setAllTasks] = useState([]);
-let [currTask, setcurrTask] = useState();
 
 let [task, setTask] = useState({
+  title: "",
+  description: "",
+  priority: "0",
+  status: "0"
+});
+
+let [updatedTask, setUpdatedTask] = useState({
   title: "",
   description: "",
   priority: "0",
@@ -65,8 +72,8 @@ fetch('/todos')
               <Tasks
                 allTasks={allTasks}
                 setAllTasks={setAllTasks}
-                currTask={currTask}
-                setcurrTask={setcurrTask}
+                updatedTask={updatedTask}
+                setUpdatedTask={setUpdatedTask}
               />
             }
           />
@@ -74,6 +81,17 @@ fetch('/todos')
           <Route
             path="/tasks/create"
             element={<AddTask setTask={setTask} task={task} setAllTasks={setAllTasks}/>}
+          />
+
+          <Route
+            path="/tasks/update/:id"
+            element={
+              <UpdateTask
+                setAllTasks={setAllTasks}
+                updatedTask={updatedTask}
+                setUpdatedTask={setUpdatedTask}
+              />
+            }
           />
 
 
