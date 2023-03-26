@@ -935,3 +935,40 @@ Processing by UsersController#login as */*
 Completed 401 Unauthorized in 7ms (Views: 1.0ms | ActiveRecord: 1.6ms | Allocations: 889)
 
 
+Started GET "/todos" for 127.0.0.1 at 2023-03-26 06:06:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 184ms (Views: 4.1ms | ActiveRecord: 3.5ms | Allocations: 50707)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-26 06:06:15 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1423)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-26 06:06:24 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 60ms (Views: 9.3ms | ActiveRecord: 19.7ms | Allocations: 1426)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-26 06:06:24 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 42ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1428)
+
+

@@ -1,0 +1,155 @@
+.formDivTasks {
+    /* position: absolute;
+    top: 0px; */
+    /* background-image: url(../../../public/marvin-meyer-SYTO3xs06fU-unsplash\ \(1\).jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100%;
+  }
+  
+  .loginDivTasks {
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  .logInFormTasks {
+    background-color: rgba(27, 27, 27, 0.7);
+    width: 60%;
+    height: 450px;
+    text-align: left;
+    padding-top: 50px;
+    border-radius: 12px;
+  }
+
+  /* style={{marginLeft: "30px"}} */
+  
+  .logInFormTasks label {
+    padding:0px 50px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  
+  .logInFormTasks input {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0px;
+  }
+  
+  .logInFormTasks input[type="submit"]{
+    background-color: rgb(255, 87, 51);
+    color: white;
+    float: right;
+    margin-right: 70px;
+  }
+
+  .todayBtn{
+    background-color: rgb(255, 87, 51);
+    color: white;
+    /* float: right; */
+    margin-right: 70px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .clickh2{
+    float: left;
+    padding: 50px;
+  }
+
+  .filterForm{
+    background-color: rgba(27, 27, 27, 0.7);
+    margin: 30px auto;
+    width: 70%;
+    height: 70px;
+    text-align: center;
+    padding: 0px 10px 15px 20px;
+    border-radius: 12px;  }
+
+  .taskDiv {
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+  }
+
+  .filterBtn{
+    background-color: rgb(255, 87, 51);
+    color: white;
+    /* float: right; */
+    margin-right: 70px;
+    margin-left: 20px;
+    padding: 7px 15px;
+    border-radius: 12px;
+  
+  }
+  
+  .taskCardUl {
+    top: 3px;
+    color: black;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0px auto 0px auto;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .taskCardLi {
+    width: 70%;
+    min-height: 100%;
+    top: 2px;
+    border: thin solid gray;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 10px 10px 5px -4px rgba(112, 97, 97, 0.75);
+    border-radius: 10px;
+  }
+
+  
+  .restInLi {
+    border-bottom: thin solid black;
+  }
+
+  /* className="liBtn" */
+
+  .liBtn1{
+    background-color:white;
+    /* text-decoration: none; */
+    color: black;
+    float: right;
+    margin: 10px 10px 5px 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+  
+  }
+
+  .liBtn2{
+    background-color:green;
+    color: black;
+    /* style={{text-decoration: "none"}} */
+    float: right;
+    margin: 10px 10px 5px 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+  
+  }
+
+  .liBtn3{
+    background-color: red;
+    color: white;
+    float: right;
+    margin: 10px 10px 5px 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+  
+  }

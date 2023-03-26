@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './style/login.css'
 
-function LogIn({ loginDetails, setLoginDetails, user, setUser }) {
+function LogIn({ loginDetails, setLoginDetails }) {
 
     let takeToTask = useNavigate();
     return (
