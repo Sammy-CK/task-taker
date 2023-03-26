@@ -31,6 +31,7 @@ function Tasks({
                 method: 'DELETE',
                 headers: {"Content-Type": "application/json"}
             })
+            .then()
             .then(takeLogIn("/login"))
         }}
       >

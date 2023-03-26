@@ -6,14 +6,14 @@ class TodosController < ApplicationController
         if todo.valid?
             app_response(status: :created, data: todo)
         else
-            app_response(status: :unprocessable_entity, data: todo.errors, message: 'failed')
+            app_response(status: :unprocessable_entity, data: todo.errors.full_messages, message: 'failed')
         end
     end
 
     def update
         todo = user.todos.find(params[:id]).update(todo_params)
         if todo
-            app_response(data: { info: 'updated todo successfully' })
+            app_response(data: { info: 'updated todo successfully' }, status: :ok)
         else
             app_response(message: 'failed', data: { info: 'something went wrong. could not update todo' }, status: :unprocessable_entity)
         end

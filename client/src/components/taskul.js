@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import './style/tasks.css'
 
 function TaskUl({ taskd, setUpdatedTask, allTasks, setAllTasks }) {
+    
+ 
 
   return (
     <li className="taskCardLi">
@@ -13,7 +15,9 @@ function TaskUl({ taskd, setUpdatedTask, allTasks, setAllTasks }) {
         {" "}
         <NavLink to={`/tasks/${taskd.id}`} style={{textDecoration: "none", color: "black"}}>More info</NavLink>
       </button>
-      <button className="liBtn2" onClick={() =>   setUpdatedTask(taskd)}>
+      <button className="liBtn2" onClick={() =>   setUpdatedTask({id:taskd.id, title:taskd.title, description:taskd.description, status:`${  (taskd.status=== "CREATED")? "0": (taskd.status=== "STARTED")? "1": (taskd.status === "COMPLETED")? "2": "3"
+ }`, priority: `${ (taskd.priority === "MEDIUM")? "1":(taskd.priority === "LOW")? "0": "2" }` 
+          })}>
         {" "}
         <NavLink to={`/tasks/update/${taskd.id}` } style={{textDecoration: "none", color: "black"}}>Edit</NavLink>
       </button>

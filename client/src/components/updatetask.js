@@ -11,7 +11,7 @@ function UpdateTask({
   setUpdatedTask,
 }) {
   let takeToTask = useNavigate();
-
+  // console.log(updatedTask)
   return (
     <div className="formDivUpdate">
             <h1
@@ -31,29 +31,41 @@ function UpdateTask({
         className="logInFormUpdate"
         onSubmit={(e) => {
           e.preventDefault();
-
+          let send = {title: updatedTask.title, description: updatedTask.description, priority: +(updatedTask.priority), status: +(updatedTask.status)}
+          console.log(send)
             fetch(`/todos/${updatedTask.id}`, {
               method: "PUT",
               headers: { "content-type": "application/json" },
-              body: JSON.stringify( {title: updatedTask.title, description: updatedTask.description, priority: +(updatedTask.priority), status: +(updatedTask.status)} ),
+              body: JSON.stringify( send ),
             })
+              .then((resp) => {
+                
+                if(resp.ok){
+                resp.json()
+                .then((data) => {
+                  setUpdatedTask({
+                      title: "",
+                      description: "",
+                      priority: "0",
+                      status: "0"
+                    });
+  
+  
+            fetch("/todos")
               .then((resp) => resp.json())
               .then((data) => {
-                setUpdatedTask({
-                    title: "",
-                    description: "",
-                    priority: "0",
-                    status: "0"
-                  });
+                setAllTasks(data.data);
+                takeToTask("/tasks");
+              });
+          });
 
+        }else{
+                  resp.json()
+                 .then(data => alert(data.data.info))
+                }
+              
+              })
 
-          fetch("/todos")
-            .then((resp) => resp.json())
-            .then((data) => {
-              setAllTasks(data.data);
-              takeToTask("/tasks");
-            });
-        });
     
         }}
       >

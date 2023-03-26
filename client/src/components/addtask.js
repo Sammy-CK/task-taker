@@ -19,19 +19,33 @@ function AddTask({setTask, task, setAllTasks  }){
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({title: task.title, description: task.description, priority: +(task.priority), status: +(task.status)}),
           })
-            .then((resp) => resp.json())
-            .then((data) => {
-              console.log(data);
-              setTask({title: '', description: '', priority: '0', status: '0'})
-          
-              fetch("/todos")
-            .then((resp) => resp.json())
-            .then((data) => {
-              setAllTasks(data.data)
-              taskTasks('/tasks')
-            });
+            .then((resp) =>{
+            if(resp.ok){
+              resp.json()
 
-        });
+              .then((data) => {
+                console.log(data);
+                setTask({title: '', description: '', priority: '0', status: '0'})
+            
+                fetch("/todos")
+              .then((resp) => resp.json())
+              .then((data) => {
+                setAllTasks(data.data)
+                taskTasks('/tasks')
+              });
+          });
+
+
+            }else{
+              resp.json()
+              .then((data) => {
+                alert(data.data)
+                console.log(data)
+              })
+            }
+            
+          })
+
         }}
       >
               <h1 style={{textAlign: "center"}}>ADD TASK</h1>

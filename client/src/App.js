@@ -11,7 +11,7 @@ import UpdateTask from './components/updatetask';
 
 
 function App() {
-  let [user, setUser] = useState(null);
+  // let [user, setUser] = useState(null);
   let [loginDetails, setLoginDetails] = useState({ username: "", password: "" });
   let [signupDetails, setSignupDetails] = useState({
     username: "",
