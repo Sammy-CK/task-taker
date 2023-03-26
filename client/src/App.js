@@ -3,6 +3,7 @@ import {React, useState} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Homepage from './components/homepage'
 import LogIn from "./components/login";
+import SignUp from "./components/signup";
 
 
 
@@ -10,6 +11,11 @@ function App() {
 
   let [loginDetails, setLoginDetails] = useState({ username: "", password: "" });
   let [user, setUser] = useState(null);
+  let [signupDetails, setSignupDetails] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
   return (
     <div className="App">
@@ -28,6 +34,18 @@ function App() {
               />
             }
           />
+          
+          
+          <Route
+            path="/signup"
+            element={
+              <SignUp
+                signupDetails={signupDetails}
+                setSignupDetails={setSignupDetails}
+              />
+            }
+          />
+
 
       </Routes>
       

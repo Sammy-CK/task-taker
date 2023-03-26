@@ -36,7 +36,7 @@ function LogIn({ loginDetails, setLoginDetails, user, setUser }) {
                     if(resp.ok){
                         resp.json().then((user) => console.log(user))
                     }else{
-                        resp.json().then((user) => console.log(user))
+                        resp.json().then((error) => alert(error.message))
                     }
             })
             
