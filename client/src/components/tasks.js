@@ -1,6 +1,6 @@
 import { React } from "react";
 import TaskUl from "./taskul";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import './style/tasks.css'
 function Tasks({
   allTasks,
@@ -15,7 +15,6 @@ function Tasks({
       <TaskUl
         key={taskd.id}
         taskd={taskd}
-        currTask={currTask}
         setcurrTask={setcurrTask}
         allTasks={allTasks}
         setAllTasks={setAllTasks}
@@ -28,7 +27,11 @@ function Tasks({
             <button
       className="homepageLinks"
         onClick={() => {
-          takeLogIn("/login");
+            fetch('/users/logout', {
+                method: 'DELETE',
+                headers: {"Content-Type": "application/json"}
+            })
+            .then(takeLogIn("/login"))
         }}
       >
         LOG OUT
@@ -51,6 +54,8 @@ function Tasks({
           </b>
         </p>
       </div>
+
+      <NavLink to="/tasks/create">ADD TASK</NavLink>
 
       <ul className="taskCardUl">{tasksShown}</ul>
     </div>

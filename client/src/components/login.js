@@ -34,7 +34,10 @@ function LogIn({ loginDetails, setLoginDetails }) {
             })
                 .then(resp => {
                     if(resp.ok){
-                        resp.json().then((user) => console.log(user))
+                        resp.json().then((user) => {
+                          console.log(user)
+                          takeToTask('/tasks')
+                        })
                     }else{
                         resp.json().then((error) => alert(error.message))
                     }

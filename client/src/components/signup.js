@@ -34,7 +34,10 @@ function SignUp({ signupDetails, setSignupDetails }) {
             })
             .then(resp => {
                 if(resp.ok){
-                    resp.json().then((user) => console.log(user))
+                    resp.json().then((user) => {
+                      console.log(user)
+                      travelHome('/login')
+                    })
                 }else{
                     resp.json().then((error) => alert(`${error.data.username || error.message}`))
                     setSignupDetails({ username: "", email: "", password: "" });

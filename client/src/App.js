@@ -5,11 +5,12 @@ import Homepage from './components/homepage'
 import LogIn from "./components/login";
 import SignUp from "./components/signup";
 import Tasks from "./components/tasks";
+import AddTask from './components/addtask';
 
 
 
 function App() {
-
+  let [user, setUser] = useState(null);
   let [loginDetails, setLoginDetails] = useState({ username: "", password: "" });
   let [signupDetails, setSignupDetails] = useState({
     username: "",
@@ -19,19 +20,26 @@ function App() {
 let [allTasks, setAllTasks] = useState([]);
 let [currTask, setcurrTask] = useState();
 
+let [task, setTask] = useState({
+  title: "",
+  description: "",
+  priority: "0",
+  status: "0"
+});
+
 useEffect(() => {
 fetch('/todos')
 .then(resp => resp.json())
-.then(data => setAllTasks(data))
+.then(data => setAllTasks(data.data))
 }, [])
-
-  return (
+ 
+    return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-      <Route path='/' element={<Homepage />}/>
-      
-      <Route
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+
+          <Route
             path="/login"
             element={
               <LogIn
@@ -40,8 +48,7 @@ fetch('/todos')
               />
             }
           />
-          
-          
+
           <Route
             path="/signup"
             element={
@@ -64,9 +71,13 @@ fetch('/todos')
             }
           />
 
+          <Route
+            path="/tasks/create"
+            element={<AddTask setTask={setTask} task={task} setAllTasks={setAllTasks}/>}
+          />
 
-      </Routes>
-      
+
+        </Routes>
       </BrowserRouter>
     </div>
   );
