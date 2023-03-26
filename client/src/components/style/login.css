@@ -1,0 +1,45 @@
+.formDiv {
+    position: absolute;
+    top: 0px;
+    background-image: url(../../../public/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100%;
+  }
+  
+  .loginDiv {
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  .logInForm {
+    background-color: rgba(240, 232, 232, 0.97);
+    width: 30%;
+    height: 400px;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 12px;
+  }
+  
+  .logInForm label {
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 13px;
+  }
+  
+  .logInForm input {
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .logInForm input[type="submit"] {
+    background-color: rgb(255, 87, 51);
+    color: white;
+  }
