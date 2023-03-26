@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "Times New Roman";
+  }
+
+#homepageDiv{
+  /* position: absolute;
+  top: 0px; */
+  background-image: url(../../../public/marvin-meyer-SYTO3xs06fU-unsplash\ \(1\).jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 50%;
+}
+
+
+.homepageLinks {
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+    color: orangered;
+    background-color: burlywood;
+    border-radius: 10px;
+    float: right;
+  }
+
+  .insideHomePage {
+    background-color: rgba(240, 233, 233, 0.97);
+    width: 85%;
+    margin: 10px auto;
+    border-radius: 12px;
+    padding: 20px;
+    /* list-style-type:none; */
+  }
+  
+  .mission{
+    margin: 40px auto;
+  }
+
+  .missionDiv {
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+
+
+  .testLi:nth-child(even) {
+    text-align: right;
+    padding: 10px;
+  }
+  
+  .testLi:nth-child(odd) {
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .testUl {
+    color: white;
+    background-color: rgba(27, 27, 27, 0.6);
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .patent{
+    padding: 30px;
+    /* color: white; */
+  }
+
+  /* .missionUl{
+
+  } */
+
+      .missionLi:nth-child(even) {
+    text-align: right;
+    padding: 10px;
+  }
+  
+  .missionLi:nth-child(odd) {
+    text-align: left;
+    padding: 20px;
+  }
