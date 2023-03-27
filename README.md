@@ -1,5 +1,9 @@
 # phase-4-task-taker
-Welcome to Task Manager an application that allows users to keep track of their tasks easily 
+Welcome to Task Manager Frontend an application that allows users to keep track of their tasks easily.
+
+THis is the frontend built with React to navigate to the Ruby on Rails backend repository follow:
+
+        https://github.com/Sammy-CK/task-backend                
 
 ## Description
 Task manager assists users keep track of their tasks and organize them in a proper manner.
@@ -29,8 +33,7 @@ The goal of this application is:
 
 ## Livelink
 Use netlify  to check out website and perform operations from there.The link is:
-
-        https://animated-licorice-0d8aac.netlify.app/
+        https://deft-meerkat-90f0e4.netlify.app/
 
 - Backend of this project was built using Ruby on Rails
             
