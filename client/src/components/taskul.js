@@ -11,10 +11,9 @@ function TaskUl({ taskd, setUpdatedTask, allTasks, setAllTasks }) {
       <h2 className="restInLi">{taskd.title}</h2>
       <p style={{float: "left", paddingLeft: "150px"}}><b>STATUS: </b>{taskd.status}</p>
       <p><b>PRIORITY: </b>{taskd.priority}</p>
-      <button className="liBtn1" onClick={() => setUpdatedTask(taskd)}>
-        {" "}
-        <NavLink to={`/tasks/${taskd.id}`} style={{textDecoration: "none", color: "black"}}>More info</NavLink>
-      </button>
+      <p><b>DESCRIPTION: </b>{taskd.description}</p>
+
+
       <button className="liBtn2" onClick={() =>   setUpdatedTask({id:taskd.id, title:taskd.title, description:taskd.description, status:`${  (taskd.status=== "CREATED")? "0": (taskd.status=== "STARTED")? "1": (taskd.status === "COMPLETED")? "2": "3"
  }`, priority: `${ (taskd.priority === "MEDIUM")? "1":(taskd.priority === "LOW")? "0": "2" }` 
           })}>

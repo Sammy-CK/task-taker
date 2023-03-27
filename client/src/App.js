@@ -11,7 +11,7 @@ import UpdateTask from './components/updatetask';
 
 
 function App() {
-  // let [user, setUser] = useState(null);
+  let [user, setUser] = useState(false);
   let [loginDetails, setLoginDetails] = useState({ username: "", password: "" });
   let [signupDetails, setSignupDetails] = useState({
     username: "",
@@ -35,11 +35,27 @@ let [updatedTask, setUpdatedTask] = useState({
 });
 
 useEffect(() => {
+  fetch('/user/login/check')
+  .then((resp) => {
+    if (resp.ok){
+      setUser(true)
+    }else{
+      setUser(false)
+    }
+  })
+
+}, [])
+
+useEffect(() => {
+  if (user){
 fetch('/todos')
 .then(resp => resp.json())
 .then(data => setAllTasks(data.data))
-}, [])
- 
+}else{
+
+}
+}, [user])
+
     return (
     <div className="App">
       <BrowserRouter>
@@ -50,6 +66,7 @@ fetch('/todos')
             path="/login"
             element={
               <LogIn
+                setUser={setUser}
                 loginDetails={loginDetails}
                 setLoginDetails={setLoginDetails}
               />
@@ -70,6 +87,7 @@ fetch('/todos')
             path="/tasks"
             element={
               <Tasks
+              setUser={setUser}
                 allTasks={allTasks}
                 setAllTasks={setAllTasks}
                 updatedTask={updatedTask}

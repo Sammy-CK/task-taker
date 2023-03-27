@@ -4383,3 +4383,229 @@ Processing by TodosController#index as */*
 Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 2075)
 
 
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:25:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 34ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 19135)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:25:25 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/main.1bed355931d9702cfd45.hot-update.json" for 127.0.0.1 at 2023-03-27 09:44:38 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/main.1bed355931d9702cfd45.hot-update.json"):
+  
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:46:57 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 19127)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:46:57 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:46:57 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:46:57 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:46:57 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 168ms (Views: 51.8ms | ActiveRecord: 4.5ms | Allocations: 45434)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:46:57 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1833)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:46:59 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:46:59 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:47:00 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 1826)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:47:11 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:47:11 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:47:12 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 1814)
+
+
+Started DELETE "/users/logout" for 127.0.0.1 at 2023-03-27 09:47:15 +0300
+Processing by UsersController#logout as */*
+  Parameters: {"user"=>{}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:47:15 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:47:15 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:47:44 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:47:44 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:49:04 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:49:40 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 311)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:49:40 +0300
+Processing by UsersController#check_login_status as */*
+Filter chain halted as :session_expired? rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 311)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2023-03-27 09:49:50 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"allan", "password"=>"[FILTERED]", "user"=>{"username"=>"allan"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007f290cd4e6f8>, params: {"username"=>"allan", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"allan"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007f290cd4e6f8>, params: {"username"=>"allan", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"allan"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'allan' OR email = NULL) ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007f290cd4e6f8>, params: {"username"=>"allan", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"allan"}} }[0m
+Completed 200 OK in 427ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 1527)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:49:50 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 1825)
+
+
+Started PUT "/todos/2" for 127.0.0.1 at 2023-03-27 09:49:59 +0300
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"quickly", "description"=>"its good for your healthy living take a walk every day to stay healthy", "priority"=>0, "status"=>3, "id"=>"2", "todo"=>{"title"=>"quickly", "description"=>"its good for your healthy living take a walk every day to stay healthy", "status"=>3, "priority"=>0}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ? AND "todos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+[31mUnpermitted parameters: :id, :todo. Context: { controller: TodosController, action: update, request: #<ActionDispatch::Request:0x00007f290cce0810>, params: {"title"=>"quickly", "description"=>"its good for your healthy living take a walk every day to stay healthy", "priority"=>0, "status"=>3, "controller"=>"todos", "action"=>"update", "id"=>"2", "todo"=>{"title"=>"quickly", "description"=>"its good for your healthy living take a walk every day to stay healthy", "status"=>3, "priority"=>0}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+  [1m[36mTodo Update (0.7ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "quickly"], ["updated_at", "2023-03-27 06:49:59.668358"], ["id", 2]]
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 4.2ms | Allocations: 3520)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:49:59 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1810)
+
+
+Started PUT "/todos/3" for 127.0.0.1 at 2023-03-27 09:50:10 +0300
+Processing by TodosController#update as */*
+  Parameters: {"title"=>"footyball", "description"=>"its good for your health take a walk every day to stay healthy", "priority"=>0, "status"=>2, "id"=>"3", "todo"=>{"title"=>"footyball", "description"=>"its good for your health take a walk every day to stay healthy", "status"=>2, "priority"=>0}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ? AND "todos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+[31mUnpermitted parameters: :id, :todo. Context: { controller: TodosController, action: update, request: #<ActionDispatch::Request:0x00007f290cc31310>, params: {"title"=>"footyball", "description"=>"its good for your health take a walk every day to stay healthy", "priority"=>0, "status"=>2, "controller"=>"todos", "action"=>"update", "id"=>"3", "todo"=>{"title"=>"footyball", "description"=>"its good for your health take a walk every day to stay healthy", "status"=>2, "priority"=>0}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+  [1m[36mTodo Update (0.6ms)[0m  [1m[33mUPDATE "todos" SET "status" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["status", 2], ["updated_at", "2023-03-27 06:50:10.634723"], ["id", 3]]
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:14:in `update'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 4.6ms | Allocations: 3245)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:50:10 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1816)
+
+
+Started GET "/user/login/check" for 127.0.0.1 at 2023-03-27 09:55:36 +0300
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 09:55:36 +0300
+Processing by UsersController#check_login_status as */*
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 0.9ms | Allocations: 1820)
+
+

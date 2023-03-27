@@ -7,6 +7,7 @@ function Tasks({
   setAllTasks,
   updatedTask,
   setUpdatedTask,
+  setUser
 }) {
   // console.log(todayTasks)
   let takeLogIn = useNavigate();
@@ -32,7 +33,10 @@ function Tasks({
                 headers: {"Content-Type": "application/json"}
             })
             .then()
-            .then(takeLogIn("/login"))
+            .then(() => {
+              setUser(false)
+              takeLogIn("/login")
+              })
         }}
       >
         LOG OUT

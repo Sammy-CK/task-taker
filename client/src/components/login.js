@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './style/login.css'
 
-function LogIn({ loginDetails, setLoginDetails }) {
+function LogIn({ loginDetails, setLoginDetails, setUser }) {
 
     let takeToTask = useNavigate();
     return (
@@ -36,6 +36,7 @@ function LogIn({ loginDetails, setLoginDetails }) {
                     if(resp.ok){
                         resp.json().then((user) => {
                           console.log(user)
+                          setUser(true)
                           takeToTask('/tasks')
                         })
                     }else{

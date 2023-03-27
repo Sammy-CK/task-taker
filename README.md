@@ -1,6 +1,8 @@
 # phase-4-Task-Taker
 This is a simple RESTful API for tracking users and their tasks. It is built with Ruby on Rails.
 
+It also has a frontend in the client folder built using React
+
 We have two models: User and Task.
 
 
