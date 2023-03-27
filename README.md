@@ -55,11 +55,11 @@ To use this repo on your machine requires some simple steps
 
 - Install javascript dependencies
 
-        npm install --prefix client
+        npm install
 
 - Run the React app:
         
-        npm start --prefix client
+        npm start
 
 ## Licence
 - [MIT](https://choosealicense.com/licenses/mit/)
