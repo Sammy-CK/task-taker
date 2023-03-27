@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# phase-4-task-taker
+Welcome to Task Manager an application that allows users to keep track of their tasks easily 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Task manager assists users keep track of their tasks and organize them in a proper manner.
 
-## Available Scripts
 
-In the project directory, you can run:
+The goal of this application is:
+1. Users register / login to the platform
+2. A user creates a task that is well described with due dates.
+3. A user can then update their task.
+4. A user can then delete their task.
+5. In order to use the application, the user must be logged in.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
+- HTML
+- CSS
+- JavaScript
+- [React](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Screenshot
+<img src="./public/Screenshot from 2023-03-06 08-18-36.png" alt="screenshot" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Livelink
+Use netlify  to check out website and perform operations from there.The link is:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        https://animated-licorice-0d8aac.netlify.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Backend of this project was built using Ruby on Rails
+            
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Set Up Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
+To use this repo on your machine requires some simple steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Open a terminal / command line interface on your computer
+- Clone the repo by using the following:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        git@github.com:Sammy-CK/task-taker.git
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Be patient as it creates a copy on your local machine for you.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Change directory to the repo folder:
 
-### Code Splitting
+        cd task-taker    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Install javascript dependencies
 
-### Analyzing the Bundle Size
+        npm install --prefix client
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Run the React app:
+        
+        npm start --prefix client
 
-### Making a Progressive Web App
+## Licence
+- [MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+- [Sammy-CK](https://github.com/Sammy-CK)

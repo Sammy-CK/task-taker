@@ -4347,3 +4347,39 @@ Processing by UsersController#logout as */*
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 255)
 
 
+Started POST "/users/login" for 127.0.0.1 at 2023-03-27 08:43:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"allan", "password"=>"[FILTERED]", "user"=>{"username"=>"allan"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007ffbb0b773d0>, params: {"username"=>"allan", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"allan"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007ffbb0b773d0>, params: {"username"=>"allan", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"allan"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'allan' OR email = NULL) ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007ffbb0b773d0>, params: {"username"=>"allan", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"allan"}} }[0m
+Completed 200 OK in 357ms (Views: 0.7ms | ActiveRecord: 2.4ms | Allocations: 36928)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-27 08:44:05 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"walkin", "description"=>"its good for your health take a walk every day to stay healthy", "priority"=>0, "status"=>0, "todo"=>{"title"=>"walkin", "description"=>"its good for your health take a walk every day to stay healthy", "status"=>0, "priority"=>0}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007ffbc0bae5a0>, params: {"title"=>"walkin", "description"=>"its good for your health take a walk every day to stay healthy", "priority"=>0, "status"=>0, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"walkin", "description"=>"its good for your health take a walk every day to stay healthy", "status"=>0, "priority"=>0}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:5:in `create'
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "walkin"], ["description", "its good for your health take a walk every day to stay healthy"], ["status", 0], ["priority", 0], ["user_id", 1], ["created_at", "2023-03-27 05:44:05.845312"], ["updated_at", "2023-03-27 05:44:05.845312"]]
+  ↳ app/controllers/todos_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:5:in `create'
+Completed 201 Created in 70ms (Views: 0.7ms | ActiveRecord: 5.8ms | Allocations: 22651)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-27 08:44:05 +0300
+Processing by TodosController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `app_response'
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 2075)
+
+
