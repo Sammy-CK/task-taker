@@ -5,6 +5,7 @@ THis is the frontend built with React to navigate to the Ruby on Rails backend r
 
         https://github.com/Sammy-CK/task-backend                
 
+
 ## Description
 Task manager assists users keep track of their tasks and organize them in a proper manner.
 
