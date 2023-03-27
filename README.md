@@ -33,8 +33,8 @@ The goal of this application is:
 ## Getting Started
 
 ## Livelink
-Use netlify  to check out website and perform operations from there.The link is:
-        https://deft-meerkat-90f0e4.netlify.app/
+Use netlify  to check out website and perform operations from there.The link in the About section
+
 
 - Backend of this project was built using Ruby on Rails
             
