@@ -11,22 +11,17 @@ function Tasks({
 }) {
   // console.log(todayTasks)
   let takeLogIn = useNavigate();
-  let tasksShown
-  if(allTasks.length > 0) {
-     tasksShown = allTasks.map((taskd) => {
-      return (
-        <TaskUl
-          key={taskd.id}
-          taskd={taskd}
-          setUpdatedTask={setUpdatedTask}
-          allTasks={allTasks}
-          setAllTasks={setAllTasks}
-        />
-      );
-    });
-  }else{
-     tasksShown = <li>No tasks Added</li>
-  }
+  let tasksShown = allTasks.map((taskd) => {
+    return (
+      <TaskUl
+        key={taskd.id}
+        taskd={taskd}
+        setUpdatedTask={setUpdatedTask}
+        allTasks={allTasks}
+        setAllTasks={setAllTasks}
+      />
+    );
+  });
 
 
   return (
