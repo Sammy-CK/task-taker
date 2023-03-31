@@ -28,7 +28,7 @@ function Tasks({
             <button
       className="homepageLinks"
         onClick={() => {
-            fetch('/users/logout', {
+            fetch('https://task-201f.onrender.com/users/logout', {
                 method: 'DELETE',
                 headers: {"Content-Type": "application/json"}
             })

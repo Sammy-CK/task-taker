@@ -35,7 +35,7 @@ let [updatedTask, setUpdatedTask] = useState({
 });
 
 useEffect(() => {
-  fetch('/user/login/check')
+  fetch('https://task-201f.onrender.com/user/login/check')
   .then((resp) => {
     if (resp.ok){
       setUser(true)
@@ -48,7 +48,7 @@ useEffect(() => {
 
 useEffect(() => {
   if (user){
-fetch('/todos')
+fetch('https://task-201f.onrender.com/todos')
 .then(resp => resp.json())
 .then(data => setAllTasks(data.data))
 }else{

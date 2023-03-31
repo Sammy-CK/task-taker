@@ -33,7 +33,7 @@ function UpdateTask({
           e.preventDefault();
           let send = {title: updatedTask.title, description: updatedTask.description, priority: +(updatedTask.priority), status: +(updatedTask.status)}
           console.log(send)
-            fetch(`/todos/${updatedTask.id}`, {
+            fetch(`https://task-201f.onrender.com/todos/${updatedTask.id}`, {
               method: "PUT",
               headers: { "content-type": "application/json" },
               body: JSON.stringify( send ),
@@ -51,7 +51,7 @@ function UpdateTask({
                     });
   
   
-            fetch("/todos")
+            fetch("https://task-201f.onrender.com/todos")
               .then((resp) => resp.json())
               .then((data) => {
                 setAllTasks(data.data);

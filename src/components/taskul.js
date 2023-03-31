@@ -23,7 +23,7 @@ function TaskUl({ taskd, setUpdatedTask, allTasks, setAllTasks }) {
       <button
       className="liBtn3"
         onClick={() => {
-          fetch(`/todos/${taskd.id}`, {
+          fetch(`https://task-201f.onrender.com/todos/${taskd.id}`, {
             method: "DELETE",
             headers: {"content-type": "application/json",}
         })

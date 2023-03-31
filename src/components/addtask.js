@@ -14,7 +14,7 @@ function AddTask({setTask, task, setAllTasks  }){
         onSubmit={(e) => {
           e.preventDefault();
 
-          fetch("/todos", {
+          fetch("https://task-201f.onrender.com/todos", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({title: task.title, description: task.description, priority: +(task.priority), status: +(task.status)}),
@@ -27,7 +27,7 @@ function AddTask({setTask, task, setAllTasks  }){
                 console.log(data);
                 setTask({title: '', description: '', priority: '0', status: '0'})
             
-                fetch("/todos")
+                fetch("https://task-201f.onrender.com/todos")
               .then((resp) => resp.json())
               .then((data) => {
                 setAllTasks(data.data)

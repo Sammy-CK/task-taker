@@ -27,7 +27,7 @@ function LogIn({ loginDetails, setLoginDetails, setUser }) {
             e.preventDefault();
             // console.log(loginDetails)
 
-            fetch('/users/login', {
+            fetch('https://task-201f.onrender.com/users/login', {
                 method: 'POST',
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(loginDetails)

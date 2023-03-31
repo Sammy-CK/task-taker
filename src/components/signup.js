@@ -27,7 +27,7 @@ function SignUp({ signupDetails, setSignupDetails }) {
             document.getElementById("Initial").value ===
             document.getElementById("secondInitial").value
           ) {
-            fetch("/users", {
+            fetch("https://task-201f.onrender.com/users", {
               method: "POST",
               headers: {"Content-Type": "application/json",},
               body: JSON.stringify(signupDetails),
