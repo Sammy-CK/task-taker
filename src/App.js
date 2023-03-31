@@ -50,7 +50,13 @@ useEffect(() => {
   if (user){
 fetch('https://task-201f.onrender.com/todos')
 .then(resp => resp.json())
-.then(data => setAllTasks(data.data))
+.then(data => {
+  if (data.data.length !== 0){
+    setAllTasks(data.data)
+  }else{
+
+  }
+})
 }else{
 
 }
